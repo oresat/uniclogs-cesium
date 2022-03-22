@@ -1,20 +1,12 @@
 version: '3'
 services:
   uniclogs-cesium:
+    image: uniclogs-cesium
     build:
       context: .
-      dockerfile: ./docker/uniclogs-cesium/Dockerfile
-    image: uniclogs-cesium
+      dockerfile: Dockerfile
     ports:
       - '8080:8080'
-    network_mode: 'host'
-  uniclogs-cesium-data:
-    build:
-      context: .
-      dockerfile: ./docker/uniclogs-cesium-data/Dockerfile
-    image: uniclogs-cesium-data
-    ports:
-      - '5000:5000'
     network_mode: 'host'
     volumes:
       - ./data:/data

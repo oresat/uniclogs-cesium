@@ -12,11 +12,6 @@ Cesium-based app to show where OreSat0 is.
 - Generate tiles from geoTIFF: `$ gdal2tiles.py world.200412.3x21600x10800.tif tiles -p geodetic --tmscompatible --process=4`
 - `$ cd -`
 
-## Run Data REST API
-
-- Install dependencies: `$ pip install -r app/requirements.txt`
-- Run: `$ flask run`
-
 ## Run Cesium App
 
 - Install `npm` for your system

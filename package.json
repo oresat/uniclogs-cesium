@@ -22,7 +22,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "webpack serve --config webpack.config.js --open"
+    "start": "webpack serve --config webpack.config.js"
   },
   "devDependencies": {
     "cesium": "^1.84.0",
@@ -33,7 +33,8 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.3.1"
+    "webpack-dev-server": "^4.3.1",
+    "satellite.js": "^4.1.3"
   }
 }
 

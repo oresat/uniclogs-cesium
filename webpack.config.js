@@ -44,13 +44,13 @@ module.exports = {
                 { from: path.join(cesiumSource, cesiumWorkers), to: 'Workers' },
                 { from: path.join(cesiumSource, 'Assets'), to: 'Assets' },
                 { from: path.join(cesiumSource, 'Widgets'), to: 'Widgets' },
-                { from: 'src/static', to: 'static' }
+                { from: 'src/static', to: 'static' },
+                { from: 'data/tiles', to: 'tiles' }
             ]
         }),
         new webpack.DefinePlugin({
             // Define relative base path in cesium for loading assets
             CESIUM_BASE_URL: JSON.stringify(''),
-            DATA_HOST: JSON.stringify(process.env.DATA_HOST),
         })
     ],
     mode: 'development',

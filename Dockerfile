@@ -9,6 +9,8 @@ COPY src /app/src
 COPY package.json /app
 COPY webpack.config.js /app
 
+COPY data /app/data
+
 RUN npm install
 RUN npm run build
 

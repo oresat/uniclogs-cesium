@@ -1,5 +1,0 @@
-flask
-flask-cors
-satellite-czml
-requests
-python-dateutil

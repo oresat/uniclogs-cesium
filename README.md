@@ -1,28 +1,34 @@
-# Uniclogs Cesium
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Cesium-based app to show where OreSat0 is.
+## Getting Started
 
-## Make Earth Image Tiles
+First, run the development server:
 
-- Install [GDAL] for your system. See [GDAL Download].
-- `$ mkdir data`
-- `$ cd data`
-- Download NASA's Blue Marble image: `$ wget https://eoimages.gsfc.nasa.gov/images/imagerecords/74000/74218/world.200412.3x21600x10800.png`
-- Turn the png into a geoTIFF: `$ gdal_translate -of GTiff -a_srs EPSG:4326 -a_ullr -180 90 180 -90 world.200412.3x21600x10800.png world.200412.3x21600x10800.tif`
-- Generate tiles from geoTIFF: `$ gdal2tiles.py world.200412.3x21600x10800.tif tiles -p geodetic --tmscompatible --process=4`
-- `$ cd -`
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## Run Data REST API
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Install dependencies: `$ pip install -r app/requirements.txt`
-- Run: `$ flask run`
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Run Cesium App
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-- Install `npm` for your system
-- Install dependencies: `$ npm update`
-- Run: `$ npm start`
-- Goto `localhost:8080` in a web browser
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-[GDAL]:https://gdal.org
-[GDAL Download]:https://gdal.org/download.html
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

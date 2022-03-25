@@ -1,39 +1,20 @@
 {
   "name": "uniclogs-cesium",
-  "version": "1.0.0",
-  "description": "Cesium-based app to show where OreSat is.",
-  "homepage": "https://www.oresat.org",
-  "license": "Apache-2.0",
-  "author": {
-    "name": "PSAS",
-    "url": "https://pdxaerospace.org"
-  },
-  "keywords": [
-    "cesium",
-    "CesiumJS",
-    "webpack",
-    "example",
-    "oresat"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/oresat/uniclogs-cesium.git"
-  },
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack serve --config webpack.config.js --open"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "cesium": "^1.84.0",
-    "copy-webpack-plugin": "^10.2.4",
-    "css-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.2",
-    "style-loader": "^3.2.1",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.3.1"
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0"
   }
 }
-
